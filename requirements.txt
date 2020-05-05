@@ -3,7 +3,7 @@ flask
 tensorflow
 dlib
 opencv-python
-os
+
 numpy
 Pillow
 matplotlib
