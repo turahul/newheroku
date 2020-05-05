@@ -3,7 +3,7 @@ flask-ngrok
 flask
 tensorflow-cpu
 dlib
-opencv-python
+opencv-contrib-python
 wheel
 numpy
 Pillow
