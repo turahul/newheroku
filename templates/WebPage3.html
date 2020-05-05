@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+
+            div.transbox {
+            width: 600px;
+            height: 250px;
+            position: fixed;
+            top: 15%;
+            left: 30%;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.5;
+            border-radius: 25px;
+            }
+            div.transbox1 {
+            width: 600px;
+            height: 100px;
+            position: fixed;
+            top: 70%;
+            left: 30%;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.5;
+            border-radius: 25px;
+            }
+            h1 {
+            position: fixed;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            top: 10%;
+            left: 45%;
+			font-size: 40px;
+            margin-top: -50px;
+            margin-left: -100px;}
+            form.f2 {
+            position: fixed;
+            width: 200px;
+            top: 65%;
+            left: 48%;
+            margin-top: -50px;
+            margin-left: -100px;
+            line-height: 500%;}
+			h2 {
+            position: fixed;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            top: 68%;
+            left: 52%;
+			font-size: 40px;
+            margin-top: -50px;
+            margin-left: -100px;}
+            form.f2 {
+            position: fixed;
+            width: 200px;
+            top: 65%;
+            left: 48%;
+            margin-top: -50px;
+            margin-left: -100px;
+            line-height: 500%;}
+            form.f1 {
+            position: fixed;
+            width: 200px;
+            top: 35%;
+            left: 48%;
+            margin-top: -50px;
+            margin-left: -100px;
+            line-height: 500%;}
+            .input[type=file]{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(to bottom right, #000000, rgb(124, 90, 218));
+            padding: 15px 40px;
+            font-weight: normal;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            }
+            .input[type=submit]{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(to bottom right, #00c7ca, rgb(124, 90, 218));
+			left: 50%;
+            padding: 15px 40px;
+            font-weight: normal;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            }
+            .glow-button:hover {
+            color: rgb(253, 253, 253);
+            box-shadow: 0 5px 15px rgba(22, 21, 22, 0.4);
+			left: 50%;
+            }
+         
+            
+            
+            </style>
+    <meta charset="utf-8" />
+    <title>DEEPFAKE VIDEO FORENSICS</title>
+</head>
+<body>
+    <body style="background:#eee url(https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat ;">
+        
+
+            
+        <div class="transbox">
+            
+        </div>
+        <h1 align="center" style="color:white;" font-size:"x-large"><strong> DEEPFAKE DETECTION </strong></h1>
+        <center style="position:center;">
+            <form class="f1" method="post" enctype=multipart/form-data >
+                <input type="file" name="file" class="input glow-button" multiple/><br>
+				 <input type="submit" class="input glow-button" />
+            </form>
+            <form class="f2" method="post" enctype=multipart/form-data >
+               
+            </form>
+			<h2 align="center" style="color:white;" font-size:"x-large"><strong> RESULT</strong></h1>
+            <div class="transbox1">
+                        <p style="font-size: 40px;font-style:oblique;color:rgb(245, 20, 234);font-family: "Comic Sans MS", "Comic Sans", cursive;">
+                              <b>  {{message}}</b>
+
+                </div>
+
+
+            </p>
+        </center>
+    </body>
+</html>
