@@ -9,7 +9,7 @@ from PIL import Image, ImageChops, ImageEnhance
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
 from matplotlib import pyplot as imshow
-model = load_model('/content/drive/My Drive/Colab Notebooks/deepfake2.h5')
+model = load_model('/deepfake2.h5')
 np.set_printoptions(suppress=True)
 
 def predict(filename):
@@ -18,7 +18,7 @@ def predict(filename):
   m=0
   n=0
   detector = dlib.get_frontal_face_detector()
-  cap = cv2.VideoCapture('/content/drive/My Drive/Colab Notebooks/uploads/'+filename)
+  cap = cv2.VideoCapture('/uploads'+filename)
   frameRate = cap.get(5)
   while cap.isOpened():
     frameId = cap.get(1)
@@ -55,13 +55,13 @@ def predict(filename):
 
 
 
-app = Flask(__name__,template_folder="/content/drive/My Drive/Colab Notebooks/templates")
+app = Flask(__name__,template_folder="/templates")
 run_with_ngrok(app)   #starts ngrok when the app is run
 @app.route("/", methods = ["GET","POST"])
 def home():
   if request.method=="POST":
     file = request.files["file"]
-    file.save(os.path.join("/content/drive/My Drive/Colab Notebooks/uploads",file.filename))
+    file.save(os.path.join("/uploads",file.filename))
     filename = file.filename
     #predict(filename)
     return render_template("WebPage3.html", message=predict(filename))
