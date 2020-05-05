@@ -1,4 +1,5 @@
 flask-ngrok
+wheel
 flask
 tensorflow
 dlib
