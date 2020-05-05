@@ -1,7 +1,6 @@
 flask-ngrok
-wheel
 flask
-tensorflow
+tensorflow-cpu
 dlib
 opencv-python
 wheel
