@@ -70,5 +70,5 @@ def home():
 
         
     return render_template("WebPage3.html", message="upload")
-print(m,n)
+
 app.run()
