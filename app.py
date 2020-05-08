@@ -12,7 +12,7 @@ from tensorflow.keras.preprocessing.image import img_to_array, load_img
 model = load_model('deepfake2.h5')
 
 app = Flask(__name__,template_folder="templates")
-run_with_ngrok(app)
+
 
 @app.route('/' , methods = ["GET","POST"] )
 
