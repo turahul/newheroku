@@ -1,4 +1,3 @@
-from flask_ngrok import run_with_ngrok
 from flask import Flask,render_template , request
 import os
 import tensorflow as tf
