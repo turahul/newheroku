@@ -60,15 +60,15 @@ def home():
           m=(m/(m+n))*100
           x = str(m)
           predict="Fake Video"+"\t" + x + "  %"
-          return render_template("WebPage3.html",message=predict,per=x)
+          return render_template("index.html",message=predict,per=x)
         else:
           n=(n/(m+n))*100
           y = str(n)
           predict="Real Video"+ "\t" + y + "  %"
-          return render_template("WebPage3.html",message=predict,per=y)         
+          return render_template("index.html",message=predict,per=y)         
 
         
-    return render_template("WebPage3.html", message="upload")
+    return render_template("index.html", message="upload")
 
 if __name__ == "__main__":
 	#decide what port to run the app in
