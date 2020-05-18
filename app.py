@@ -57,13 +57,13 @@ def home():
                 n=n+1
                 
         if m > n :
-          m=(m/(m+n))*100
+          m=int((m/(m+n))*100)
 	       
           x = str(m)
           predict="Fake Video"+"\t" + x + "  %"
           return render_template("index.html",message=predict,per=x)
         else:
-          n=(n/(m+n))*100
+          n=int((n/(m+n))*100)
           
           y = str(n)
           predict="Real Video"+ "\t" + y + "  %"
