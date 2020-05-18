@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageChops, ImageEnhance
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
-model = load_model('deepfake2.h5')
+model = load_model('Faceforen.h5')
 
 app = Flask(__name__,template_folder="templates")
 
@@ -58,12 +58,14 @@ def home():
                 
         if m > n :
           m=(m/(m+n))*100
-          x = str(m)
+	  a=int(m)
+          x = str(a)
           predict="Fake Video"+"\t" + x + "  %"
           return render_template("index.html",message=predict,per=x)
         else:
           n=(n/(m+n))*100
-          y = str(n)
+          b=int(n)
+          y = str(b)
           predict="Real Video"+ "\t" + y + "  %"
           return render_template("index.html",message=predict,per=y)         
 
