@@ -6,12 +6,9 @@ import dlib
 import cv2
 import os
 import numpy as np
-from PIL
-import Image, ImageChops, ImageEnhance
-from tensorflow.keras.models
-import load_model
-from tensorflow.keras.preprocessing.image
-import img_to_array, load_img
+from PIL import Image, ImageChops, ImageEnhance
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
 model = load_model('Faceforen.h5')
 
 app = Flask(__name__, template_folder = "templates")
