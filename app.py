@@ -26,13 +26,14 @@ def home():
         np.set_printoptions(suppress=True)
         m=0
         n=0
+        inc=0
         frameRate = cap.get(5)
-        while cap.isOpened():
+        while cap.isOpened() and inc < 10:
           frameId = cap.get(1)
           ret, frame = cap.read()
           if ret != True:
             break
-          if frameId % ((int(frameRate)+1)*1) == 0:
+          if frameId % ((int(frameRate)+1)*1) ==  and inc < 10:
             face_rects, scores, idx = detector.run(frame, 0)
             for i, d in enumerate(face_rects):
               x1 = d.left()
@@ -48,6 +49,7 @@ def home():
               data[0] = normalized_image_array
               prediction = model.predict(data)
               print(prediction)
+              inc=inc+1
               if prediction[0][0] > 0.50:
                 print("fake")
                 m=m+1
