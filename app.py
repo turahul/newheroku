@@ -28,12 +28,12 @@ def home():
         n=0
         inc=0
         frameRate = cap.get(5)
-        while cap.isOpened() and inc < 10:
+        while cap.isOpened() and inc < 12:
           frameId = cap.get(1)
           ret, frame = cap.read()
           if ret != True:
             break
-          if frameId % ((int(frameRate)+1)*1) ==  and inc < 10:
+          if frameId % ((int(frameRate)+1)*1) ==  and inc < 12:
             face_rects, scores, idx = detector.run(frame, 0)
             for i, d in enumerate(face_rects):
               x1 = d.left()
