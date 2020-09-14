@@ -1,7 +1,6 @@
 gunicorn
-flask-ngrok
 flask
-tensorflow-cpu
+tensorflow-cpu==1.15.0
 dlib
 opencv-contrib-python
 wheel
