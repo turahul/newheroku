@@ -6,4 +6,3 @@ opencv-contrib-python
 wheel
 numpy
 Pillow
-matplotlib
