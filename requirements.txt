@@ -1,6 +1,6 @@
 gunicorn
 flask
-tensorflow-cpu==1.15.0
+tensorflow-cpu==2.7.2
 dlib
 opencv-python==3.4.11.39
 Pillow
